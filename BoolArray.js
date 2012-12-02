@@ -5,7 +5,7 @@
 
 function BoolArray(length)
 {
-  ArrayBufferView.call(this, Math.ceil(length/8));
+  Uint8Array.call(this, Math.ceil(length/8));
 
 
   this.get = function(index)
@@ -40,7 +40,7 @@ function BoolArray(length)
   });
 }
 
-BoolArray.prototype = new ArrayBufferView();
+BoolArray.prototype = new Uint8Array();
 
 BoolArray.prototype.BYTES_PER_ELEMENT = 0.125;
 
