@@ -56,5 +56,16 @@ console.log('ba9.length='+ba9.length);
 ba9.set(8, true);
 console.log(ba9);
 
+console.log('0 -> '+ba9.get(0));
+console.log('1 -> '+ba9.get(1));
+console.log('2 -> '+ba9.get(2));
+console.log('3 -> '+ba9.get(3));
+console.log('4 -> '+ba9.get(4));
+console.log('5 -> '+ba9.get(5));
+console.log('6 -> '+ba9.get(6));
+console.log('7 -> '+ba9.get(7));
+console.log('8 -> '+ba9.get(8));
+//console.log('9 -> '+ba9.get(9));
+
 ba9.set(8, false);
 console.log(ba9);
