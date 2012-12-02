@@ -43,3 +43,7 @@ function BoolArray(length)
 BoolArray.prototype = new ArrayBufferView();
 
 BoolArray.prototype.BYTES_PER_ELEMENT = 0.125;
+
+
+// Export the BoolArray class
+exports.BoolArray = BoolArray;
