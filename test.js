@@ -16,6 +16,12 @@ console.log(ba1);
 ba1.set(0, false);
 console.log(ba1);
 
+ba1.set(0, 1);
+console.log(ba1);
+
+ba1.set(0, 0);
+console.log(ba1);
+
 //ba1.set(1, true);
 //console.log(ba1);
 
