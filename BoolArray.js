@@ -16,7 +16,7 @@ function BoolArray(length)
     var i = Math.floor(index/8);
     var j = index%8;
 
-    return (this.prototype[i] << (7-j)) >> 7;
+    return Boolean((this.prototype[i] << (7-j)) >> 7);
   };
 
   this.set = function(index, value)
