@@ -5,7 +5,7 @@
 
 function BoolArray(length)
 {
-  Uint8Array.call(this, Math.ceil(length/8));
+  this.prototype = new Uint8Array(Math.ceil(length/8));
 
 
   this.get = function(index)
@@ -13,10 +13,10 @@ function BoolArray(length)
     if(index >= length)
       throw INDEX_SIZE_ERR;
 
-    var i = Math.ceil(index/8);
+    var i = Math.floor(index/8);
     var j = index%8;
 
-    return (this[i] << (7-j)) >> 7;
+    return (this.prototype[i] << (7-j)) >> 7;
   };
 
   this.set = function(index, value)
@@ -24,13 +24,13 @@ function BoolArray(length)
     if(index >= length)
       throw INDEX_SIZE_ERR;
 
-    var i = Math.ceil(index/8);
+    var i = Math.floor(index/8);
     var j = index%8;
 
     if(value)
-      this[i] |= 1 << j;
+      this.prototype[i] |= 1 << j;
     else
-      this[i] &= ~(1 << j);
+      this.prototype[i] &= ~(1 << j);
   };
 
 
@@ -38,11 +38,9 @@ function BoolArray(length)
   {
     return length;
   });
+
+  this.BYTES_PER_ELEMENT = 0.125;
 }
-
-BoolArray.prototype = new Uint8Array();
-
-BoolArray.prototype.BYTES_PER_ELEMENT = 0.125;
 
 
 // Export the BoolArray class
