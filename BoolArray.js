@@ -44,4 +44,7 @@ function BoolArray(length)
 
 
 // Export the BoolArray class
-exports.BoolArray = BoolArray;
+if(typeof exports == 'undefined')
+  window.BoolArray = BoolArray;
+else
+  exports.BoolArray = BoolArray;
