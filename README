@@ -1,0 +1,7 @@
+BoolArray - Custom ArrayBufferView for packet booleans
+
+(C) 2012 - Jesús Leganés Combarro "Piranna" <piranna@gmail.com>
+
+It allow to access to an array of booleans structure with an API similar to the
+ArrayBufferView objects but using far less memory usage, using just one bit per
+each boolean value.
