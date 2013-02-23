@@ -1,7 +1,9 @@
-// Custom ArrayBufferView for packet booleans
-//
-// It can allow to access to an array of booleans structure but using far less
-// memory usage
+/**
+ * Custom ArrayBufferView for packet booleans
+ * 
+ * It can allow to access to an array of booleans structure but using far less
+ * memory usage
+ */
 
 (function(module){
 
