@@ -3,7 +3,9 @@
 // It can allow to access to an array of booleans structure but using far less
 // memory usage
 
-function BoolArray(length)
+(function(module){
+
+module.BoolArray = function(length)
 {
   this.prototype = new Uint8Array(Math.ceil(length/8));
 
@@ -40,11 +42,6 @@ function BoolArray(length)
   });
 
   this.BYTES_PER_ELEMENT = 0.125;
-}
+};
 
-
-// Export the BoolArray class
-if(typeof exports == 'undefined')
-  window.BoolArray = BoolArray;
-else
-  exports.BoolArray = BoolArray;
+})(this);
