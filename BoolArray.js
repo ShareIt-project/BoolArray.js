@@ -1,12 +1,11 @@
+(function(module){
+
 /**
  * Custom ArrayBufferView for packet booleans
  * 
  * It can allow to access to an array of booleans structure but using far less
  * memory usage
  */
-
-(function(module){
-
 module.BoolArray = function(length)
 {
   this.prototype = new Uint8Array(Math.ceil(length/8));
